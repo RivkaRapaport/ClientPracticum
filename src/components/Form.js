@@ -43,23 +43,10 @@ export default function Form() {
     }
 
 
-    axios.post(`https://localhost:7094/api/Users`, { family: userCtx.family, name: userCtx.name, birthDate: userCtx.birthDate, identity: userCtx.id, isMale: userCtx.isMale, userHmoId: hmo })
+
+    axios.post(`https://localhost:7094/api/Users`, { family: userCtx.family, name: userCtx.name, birthDate: userCtx.birthDate, identity: userCtx.id, isMale: userCtx.isMale, userHmoId: hmo, children: userCtx.childrenArr })
       .then((res) => {
         console.log(res)
-        axios.get(`https://localhost:7094/api/Users`)
-          .then((res) => {
-            console.log(res)
-            res.data.forEach(element => {
-              if (element.identity === userCtx.id) {
-                fatherId = element.id;
-
-              }
-            });
-
-            AddChildrenToServer(fatherId);
-          })
-          .catch((req) => { console.log(req) })
-
       })
       .catch((req) => { console.log(req) })
 

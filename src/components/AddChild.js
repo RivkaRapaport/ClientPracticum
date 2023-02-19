@@ -11,7 +11,7 @@ export default function AddChild(props) {
 
   function SetChild() {
     var children = userCtx.childrenArr;
-    children[i] = { name: nameChild, birthDate: birthDateChild, identity: idChild, parentId: 1 }
+    children[i] = { name: nameChild, birthDate: birthDateChild, identity: idChild }
     userCtx.setChildrenArr(children);
 
   }

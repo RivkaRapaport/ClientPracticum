@@ -1,5 +1,4 @@
 import React, { createContext, useState } from "react";
-// import axios from 'axios';
 export const userDetailsContext = createContext();
 
 export default function UserDetailsContext(props) {
