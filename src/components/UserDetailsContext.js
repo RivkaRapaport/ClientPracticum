@@ -2,7 +2,6 @@ import React, { createContext, useState } from "react";
 export const userDetailsContext = createContext();
 
 export default function UserDetailsContext(props) {
-
     const [name, setName] = useState("");
     const [family, setFamily] = useState("");
     const [id, setId] = useState("");
