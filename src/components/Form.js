@@ -42,14 +42,11 @@ export default function Form() {
         break;
     }
 
-
-
     axios.post(`https://localhost:7094/api/Users`, { family: userCtx.family, name: userCtx.name, birthDate: userCtx.birthDate, identity: userCtx.id, isMale: userCtx.isMale, userHmoId: hmo, children: userCtx.childrenArr })
       .then((res) => {
         console.log(res)
       })
       .catch((req) => { console.log(req) })
-
   }
 
   function AddChildrenToServer(fatherId) {
