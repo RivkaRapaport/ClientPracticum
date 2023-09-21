@@ -8,16 +8,13 @@ export default function AddChild(props) {
   const [idChild, setIdChild] = useState(userCtx.childrenArr[i].identity);
   const [birthDateChild, setBirthDateChild] = useState(userCtx.childrenArr[i].birthDate);
 
-
   function SetChild() {
     var children = userCtx.childrenArr;
     children[i] = { name: nameChild, birthDate: birthDateChild, identity: idChild }
     userCtx.setChildrenArr(children);
-
   }
 
   return (
-
     <div>
       <h4>ילד מספר {i + 1}</h4>
       <div className="row g-3 needs-validation"  >
